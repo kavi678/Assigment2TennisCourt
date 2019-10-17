@@ -1,0 +1,21 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model IEnumerable<IdentityUser>
+@{
+    ViewData["Title"] = "All Members";
+}
+<h2>All Members</h2>
+@if (Model.Any())
+{
+    @foreach (var item in Model)
+
+    {
+       
+        <h2> @Html.DisplayFor(modelItem => item.Email) </h2>
+    }
+
+}
+else
+{
+    <h3> No Members </h3>
+}
+
